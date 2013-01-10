@@ -1,0 +1,37 @@
+ttf hash files can not be generated for html5 (running Ubuntu 11.10)
+
+$ haxelib list
+swf: [1.17] 1.13
+nme: [3.5.3] 3.4.3
+svg: 1.02 [1.03]
+actuate: [1.52] 1.43
+xfl: [1.02]
+hxcpp: [2.10]
+jeash: [0.8.7]
+
+remove "unless=html5" from the bug1/ .nmml and run
+$ nme test -verbose html5
+NME Command-Line Tools (3.5.3)
+==============================
+Initializing project...
+Using project file: /home/heister/nmebugs/bug1/TextFields.nmml
+Reading HXCPP config: /home/heister/.hxcpp_config.xml
+Using target platform: HTML5
+Running command: update
+$
+
+it terminates before copying files (in the hash generation)
+
+if a verase.hash is present, it looks like this:
+$ nme test -verbose html5
+NME Command-Line Tools (3.5.3)
+==============================
+Initializing project...
+Using project file: /home/heister/Dropbox/PuzzleSquare/bug1/TextFields.nmml
+Reading HXCPP config: /home/heister/.hxcpp_config.xml
+Using target platform: HTML5
+Running command: update
+ - Copying template ....
+...
+and everything works as expected.
+
