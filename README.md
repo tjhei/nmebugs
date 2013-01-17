@@ -17,3 +17,7 @@ bug2: bug2/
 
 TextField.height is not set correctly in html5 if you do TextField.height = somevalue;
 expected: green box at the top left corner, got: red box.
+
+bug4: bug4/
+
+tap screen once. Expected: red A stays in front of the two squares B.
